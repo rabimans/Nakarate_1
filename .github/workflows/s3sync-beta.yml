@@ -26,14 +26,14 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
     - run: |
-      cat > src/secrets.js << EOF
+      << EOF > src/settings.js
       export default {
-          bingKey: '$BING_KEY',
-          thunderforestKey: '$THUNDERFOREST_KEY',
-          sentryDSN: '$SENTRY_DSN',
-          mapillary: '$MAPILLARY_KEY',
-          flickr: '$FLICKER_KEY',
-          google: '$GOOGLE_KEY'
+        bingKey: '$BING_KEY',
+        thunderforestKey: '$THUNDERFOREST_KEY',
+        sentryDSN: '$SENTRY_DSN',
+        mapillary: '$MAPILLARY_KEY',
+        flickr: '$FLICKER_KEY',
+        google: '$GOOGLE_KEY'
       };
       EOF
     - run: NODE_ENV=production yarn run build --if-present
