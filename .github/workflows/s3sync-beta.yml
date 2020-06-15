@@ -10,7 +10,7 @@ on:
     branches: [ beta ]
 
 jobs:
-  build:
+  build-and-deploy-s3:
 
     runs-on: ubuntu-latest
 
