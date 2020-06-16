@@ -26,7 +26,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
       - run: |
-          <<EOF > src/secrets.js
+          cat <<EOF > ./src/secrets.js
           export default {
             bingKey: '${{ secrets.BING_KEY }}',
             thunderforestKey: '${{ secrets.THUNDERFOREST_KEY }}',
