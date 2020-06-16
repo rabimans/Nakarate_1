@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Off-road.guide",
   "engines": {
-    "node": "12.13.x"
+    "node": "12.18.x"
   },
   "scripts": {
     "build": "node scripts/build.js",
