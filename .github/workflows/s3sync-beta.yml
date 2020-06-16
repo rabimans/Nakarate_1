@@ -28,12 +28,12 @@ jobs:
       - run: |
           << EOF > src/secrets.js
           export default {
-            bingKey: '$BING_KEY',
-            thunderforestKey: '$THUNDERFOREST_KEY',
-            sentryDSN: '$SENTRY_DSN',
-            mapillary: '$MAPILLARY_KEY',
-            flickr: '$FLICKER_KEY',
-            google: '$GOOGLE_KEY'
+            bingKey: '"$BING_KEY"',
+            thunderforestKey: '"$THUNDERFOREST_KEY"',
+            sentryDSN: '"$SENTRY_DSN"',
+            mapillary: '"$MAPILLARY_KEY"',
+            flickr: '"$FLICKER_KEY"',
+            google: '"$GOOGLE_KEY"'
           };
           EOF
         env:
