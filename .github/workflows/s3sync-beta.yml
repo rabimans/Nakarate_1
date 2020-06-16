@@ -30,7 +30,7 @@ jobs:
           export default {
             bingKey: '${{ secrets.BING_KEY }}',
             thunderforestKey: '${{ secrets.THUNDERFOREST_KEY }}',
-            sentryDSN: 'https://${{ secrets.SENTRY_DSN }}@sentry.io/111111',
+            sentryDSN: '${{ secrets.SENTRY_DSN }}',
             mapillary: '${{ secrets.MAPILLARY_KEY}}',
             flickr: '${{ secrets.FLICKER_KEY}}',
             google: '${{ secrets.GOOGLE_KEY}}'
