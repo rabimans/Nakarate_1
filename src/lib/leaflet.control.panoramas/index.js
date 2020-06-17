@@ -10,7 +10,6 @@ import wikimediaProvider from './lib/wikimedia';
 import {DragEvents} from '~/lib/leaflet.events.drag';
 import {onElementResize} from '~/lib/anyElementResizeEvent';
 import safeLocalStorage from '~/lib/safe-localstorage';
-import mapyczProvider from './lib/mapycz';
 
 const PanoMarker = L.Marker.extend({
     options: {
@@ -59,6 +58,15 @@ L.Control.Panoramas = L.Control.extend({
         getProviders: function() {
             return [
                 {
+                    name: 'mapillary',
+                    title: 'Mapillary',
+                    provider: mapillaryProvider,
+                    layerOptions: { opacity: 0.7, zIndex: 8 },
+                    code: 'm',
+                    selected: ko.observable(false),
+                    mapMarkerType: 'normal'
+                },
+                {
                     name: 'google',
                     title: 'Google street view',
                     provider: googleProvider,
@@ -69,31 +77,14 @@ L.Control.Panoramas = L.Control.extend({
                 },
                 {
                     name: 'wikimedia',
-                    title: 'Wikimedia commons',
+                    title: 'Wikimedia Commons',
                     provider: wikimediaProvider,
                     layerOptions: {opacity: 0.7, zIndex: 9},
                     code: 'w',
                     selected: ko.observable(false),
                     mapMarkerType: 'slim'
                 },
-                {
-                    name: 'mapillary',
-                    title: 'Mapillary',
-                    provider: mapillaryProvider,
-                    layerOptions: {opacity: 0.7, zIndex: 8},
-                    code: 'm',
-                    selected: ko.observable(false),
-                    mapMarkerType: 'normal'
-                },
-                {
-                    name: 'mapycz',
-                    title: 'mapy.cz',
-                    provider: mapyczProvider,
-                    layerOptions: {opacity: 0.7, zIndex: 8},
-                    code: 'c',
-                    selected: ko.observable(false),
-                    mapMarkerType: 'normal'
-                }
+                
             ];
         },
 

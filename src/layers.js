@@ -112,7 +112,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                             code: 'ga4',
                             isOverlay: false,
                             scaleDependent: true,
-                            maxNativeZoom: 18,
+                            maxNativeZoom: 13,
                             print: true,
                             jnx: true,
                             shortName: 'Geoscience100kun'
@@ -306,7 +306,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                             code: 'gaT',
                             isOverlay: false,
                             scaleDependent: false,
-                            maxNativeZoom: 18,
+                            maxNativeZoom: 13,
                             print: true,
                             jnx: true,
                             shortName: 'Geoscience_Australia_250k'
