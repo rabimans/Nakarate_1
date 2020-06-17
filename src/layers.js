@@ -392,7 +392,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                         print: false,
                         jnx: false
                     })
-                },             
+                },
                 {
                     title: 'OpenTopoMap',
                     isDefault: false,
