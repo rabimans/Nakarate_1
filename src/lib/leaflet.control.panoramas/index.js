@@ -61,7 +61,7 @@ L.Control.Panoramas = L.Control.extend({
                     name: 'mapillary',
                     title: 'Mapillary',
                     provider: mapillaryProvider,
-                    layerOptions: { opacity: 0.7, zIndex: 8 },
+                    layerOptions: {opacity: 0.7, zIndex: 8},
                     code: 'm',
                     selected: ko.observable(false),
                     mapMarkerType: 'normal'
