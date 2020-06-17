@@ -1255,6 +1255,12 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
             ],
         },
         {
+            title: 'Australia - Victoria',
+            layers: [
+                'VIC Emergency Atlas'
+            ],
+        },
+        {
             title: 'Australia - Tasmania',
             layers: [
                 'Tasmania Topographic base map',
@@ -1344,7 +1350,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'Bing Satellite',
         // Australia maps
         'Geoscience Australia Base',
-        'Geoscience Australia 1: 250, 000',
+        'Geoscience Australia 1:250,000',
         'Geoscience Australia National Map',
         'Tasmania Topographic base map',
         'Tasmania Raster',
@@ -1355,6 +1361,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'NSW Historic',
         'QTopo',
         'SA Topo',
+        'VIC Emergency Atlas',
         // Commercial maps
         'Yandex map',
         'Google Map',
