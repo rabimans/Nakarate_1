@@ -68,7 +68,7 @@ L.Control.Panoramas = L.Control.extend({
                 },
                 {
                     name: 'google',
-                    title: 'Google street view',
+                    title: 'Google Street View',
                     provider: googleProvider,
                     layerOptions: {zIndex: 10},
                     code: 'g',
