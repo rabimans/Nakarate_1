@@ -43,6 +43,38 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     )
                 },
                 {
+                    title: 'ESRI Topo',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'ETopo',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'esriTopo'
+                        }
+                    )
+                },
+                {
+                    title: 'ESRI Satellite',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'E',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'esri'
+                        }
+                    )
+                },
+                {
                     title: 'Yandex map',
                     isDefault: true,
                     layer: new L.Layer.Yandex('map',
@@ -923,6 +955,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
             layers: [
                 'OpenStreetMap',
                 'ESRI Satellite',
+                'ESRI Topo',
                 'Yandex map',
                 'Yandex Satellite',
                 'Google Map',
@@ -1019,6 +1052,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'OpenCycleMap',
         'OSM Outdoors',
         'mapy.cz tourist',
+        'ESRI Topo',
         // Satellite
         'ESRI Satellite',
         'Yandex Satellite',
