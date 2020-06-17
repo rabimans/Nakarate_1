@@ -59,6 +59,135 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     )
                 },
                 {
+                    title: 'NSW Topo',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://maps.six.nsw.gov.au/arcgis/rest/services/sixmaps/LPIMap/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'nswT',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'NSW_Topo'
+                        }
+                    )
+                },
+                {
+                    title: 'NSW Raster',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://maps.six.nsw.gov.au/arcgis/rest/services/sixmaps/LPITopoMap/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'nswR',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'NSW_Raster'
+                        }
+                    )
+                },
+                {
+                    title: 'NSW Imagery',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://maps.six.nsw.gov.au/arcgis/rest/services/sixmaps/LPI_Imagery_Best/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'nswI',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'NSW_Imagery'
+                        }
+                    )
+                },
+                {
+                    title: 'NSW Historic',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://maps.six.nsw.gov.au/arcgis/rest/services/sixmaps/LPITopoMap_S1/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'nswH',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'NSW_Historic'
+                        }
+                    )
+                },
+                {
+                    title: 'QTopo',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'https://gisservices.information.qld.gov.au/arcgis/rest/services/Basemaps/QldMap_Topo/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'qT',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'QTopo'
+                        }
+                    )
+                },
+                {
+                    title: 'Q Imagery',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'https://gisservices.information.qld.gov.au/arcgis/rest/services/Imagery/QldBase_AllUsers/ImageServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'qI',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'QImagery'
+                        }
+                    )
+                },
+                {
+                    title: 'SA Topo',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://www.location.sa.gov.au/arcgis/rest/services/BaseMaps/Topographic_wmas/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'saT',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'SA_Topo'
+                        }
+                    )
+                },
+                {
+                    title: 'SA Imagery',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'https://imagemap.geohub.sa.gov.au/mapproxy/wmts/PublicMosaic/webmercator_22/{z}/{x}/{y}.png',
+                        {
+                            code: 'saI',
+                            minZoom: 13,
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'SA_Imagery'
+                        }
+                    )
+                },
+                {
                     title: 'Yandex map',
                     isDefault: true,
                     layer: new L.Layer.Yandex('map',
@@ -967,6 +1096,29 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
             ],
         },
         {
+            title: 'New South Wales',
+            layers: [
+                'NSW Topo',
+                'NSW Raster',
+                'NSW Imagery',
+                'NSW Historic'
+            ],
+        },
+        {
+            title: 'Queensland',
+            layers: [
+                'QTopo',
+                'QImagery'
+            ],
+        },
+        {
+            title: 'South Australia',
+            layers: [
+                'SA Topo',
+                'SA Imagery'
+            ],
+        },
+        {
             title: 'OpenStreetMap alternatives',
             layers: [
                 'OpenTopoMap',
@@ -1039,9 +1191,18 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'ESRI Topo',
         // Satellite
         'ESRI Satellite',
+        'NSW Imagery',
+        'QImagery',
+        'SA Imagery',
         'Yandex Satellite',
         'Google Satellite',
         'Bing Satellite',
+        // Australia maps
+        'NSW Topo',
+        'NSW Raster',
+        'NSW Historic',
+        'QTopo',
+        'SA Topo',
         // Commercial maps
         'Yandex map',
         'Google Map',
