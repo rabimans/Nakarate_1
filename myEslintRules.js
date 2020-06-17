@@ -61,7 +61,7 @@ module.exports = {
         'lines-between-class-members': ['error', 'always', {exceptAfterSingleLine: true}],
         // 'max-classes-per-file': 'error', // checked, declined
         'max-depth': 'error',
-        'max-len': ['error', {code: 120}],
+        'max-len': ['error', {code: 200}],
         // 'max-lines': 'error', // checked, declined
         // 'max-lines-per-function': 'error', // checked, declined
         'max-nested-callbacks': ['error', 2],
