@@ -139,7 +139,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     )
                 },
                 {
-                    title: 'Q Imagery',
+                    title: 'QImagery',
                     isDefault: true,
                     layer: L.tileLayer(
                         'https://gisservices.information.qld.gov.au/arcgis/rest/services/Imagery/QldBase_AllUsers/ImageServer/tile/{z}/{y}/{x}',
