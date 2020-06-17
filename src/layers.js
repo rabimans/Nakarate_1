@@ -188,6 +188,134 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     )
                 },
                 {
+                    title: 'VIC Emergency Atlas',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'https://maps.em.vic.gov.au/tms_cache/mapscape_vic_merc_color_ed8/{z}/{x}/{y}.png',
+                        {
+                            code: 'vicE',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'VIC_Emergency_Atlas'
+                        }
+                    )
+                },
+                {
+                    title: 'Geoscience Australia Base',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://services.ga.gov.au/site_7/rest/services/Topographic_Base_Map_WM/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'gaB',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Geoscience_Australia_Base'
+                        }
+                    )
+                },
+                {
+                    title: 'Geoscience Australia 1:250,000',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://services.ga.gov.au/site_7/rest/services/Topographic_Base_Map_WM/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'gaT',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Geoscience_Australia_250k'
+                        }
+                    )
+                        },
+                {
+                    title: 'Geoscience Australia National Map',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://services.ga.gov.au/site_7/rest/services/Topographic_Base_Map_WM/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'gaNM',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Geoscience_Australia_NM'
+                        }
+                    )
+                },
+                {
+                    title: 'Tasmania Topographic base map',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Topographic/MapServer/{z}/{y}/{x}',
+                        {
+                            code: 'tasBM',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Tasmania_Topographic_BM'
+                        }
+                    )
+                },
+                {
+                    title: 'Tasmania Raster',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/TasmapRaster/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'tasR',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Tasmania_Raster'
+                        }
+                    )
+                },
+                {
+                    title: 'Tasmania Imagery',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Orthophoto/MapServer/{z}/{y}/{x}',
+                        {
+                            code: 'tasI',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Tasmania_Imagery'
+                        }
+                    )
+                },
+                {
+                    title: 'Tasmania ES Topographic',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Orthophoto/MapServer/{z}/{y}/{x}',
+                        {
+                            code: 'tasE',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Tasmania_Emergency_Services'
+                        }
+                    )
+                },
+                {
                     title: 'Yandex map',
                     isDefault: true,
                     layer: new L.Layer.Yandex('map',
@@ -595,7 +723,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 {
                     title: 'OSM Outdoors',
                     isDefault: false,
-                    layer: L.tileLayer('https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png',
+                    layer: L.tileLayer('https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=cf406f30bfc54296a9d573ced1e9d6cf',
                         {
                             code: 'Oso',
                             isOverlay: false,
@@ -1096,7 +1224,15 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
             ],
         },
         {
-            title: 'New South Wales',
+            title: 'Australia',
+            layers: [
+                'Geoscience Australia Base',
+                'Geoscience Australia 1:250,000',
+                'Geoscience Australia National Map'
+            ],
+        },
+        {
+            title: 'Australia - New South Wales',
             layers: [
                 'NSW Topo',
                 'NSW Raster',
@@ -1105,17 +1241,26 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
             ],
         },
         {
-            title: 'Queensland',
+            title: 'Australia - Queensland',
             layers: [
                 'QTopo',
                 'QImagery'
             ],
         },
         {
-            title: 'South Australia',
+            title: 'Australia - South Australia',
             layers: [
                 'SA Topo',
                 'SA Imagery'
+            ],
+        },
+        {
+            title: 'Australia - Tasmania',
+            layers: [
+                'Tasmania Topographic base map',
+                'Tasmania Raster',
+                'Tasmania Imagery',
+                'Tasmania ES Topographic'
             ],
         },
         {
@@ -1189,7 +1334,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'OSM Outdoors',
         'mapy.cz tourist',
         'ESRI Topo',
-        // Satellite
+        // Imagery
         'ESRI Satellite',
         'NSW Imagery',
         'QImagery',
@@ -1198,6 +1343,13 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'Google Satellite',
         'Bing Satellite',
         // Australia maps
+        'Geoscience Australia Base',
+        'Geoscience Australia 1: 250, 000',
+        'Geoscience Australia National Map',
+        'Tasmania Topographic base map',
+        'Tasmania Raster',
+        'Tasmania Imagery',
+        'Tasmania ES Topographic',
         'NSW Topo',
         'NSW Raster',
         'NSW Historic',
