@@ -2,12 +2,10 @@ import L from "leaflet";
 import '~/lib/leaflet.layer.yandex';
 import '~/lib/leaflet.layer.google';
 import {BingLayer} from '~/lib/leaflet.layer.bing';
-import {BingDates} from '~/lib/leaflet.layer.bing/dates';
 import config from './config';
 import '~/lib/leaflet.layer.soviet-topomaps-grid';
 import '~/lib/leaflet.layer.westraPasses';
 import '~/lib/leaflet.layer.wikimapia';
-import {GeocachingSu} from '~/lib/leaflet.layer.geocaching-su';
 import urlViaCorsProxy from '~/lib/CORSProxy';
 
     const layersDefs = [
@@ -394,7 +392,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                         print: false,
                         jnx: false
                     })
-                },               
+                },              
                 {
                     title: 'OpenTopoMap',
                     isDefault: false,
