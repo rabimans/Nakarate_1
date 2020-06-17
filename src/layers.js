@@ -223,7 +223,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     title: 'Geoscience Australia 1:250,000',
                     isDefault: true,
                     layer: L.tileLayer(
-                        'http://services.ga.gov.au/site_7/rest/services/NATMAP_Digital_Maps_250K_2008Edition_WM/MapServer/tile/tile/{z}/{y}/{x}',
+                        'http://services.ga.gov.au/site_7/rest/services/NATMAP_Digital_Maps_250K_2008Edition_WM/MapServer/tile/{z}/{y}/{x}',
                         {
                             code: 'gaT',
                             isOverlay: false,
@@ -255,7 +255,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     title: 'Tasmania Topographic base map',
                     isDefault: true,
                     layer: L.tileLayer(
-                        'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Topographic/MapServer/{z}/{y}/{x}?blankTile=false',
+                        'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Topographic/MapServer/tile/{z}/{y}/{x}?blankTile=false',
                         {
                             code: 'tasBM',
                             isOverlay: false,
@@ -287,7 +287,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     title: 'Tasmania Imagery',
                     isDefault: true,
                     layer: L.tileLayer(
-                        'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Orthophoto/MapServer/{z}/{y}/{x}?blankTile=false',
+                        'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Orthophoto/MapServer/tile/{z}/{y}/{x}?blankTile=false',
                         {
                             code: 'tasI',
                             isOverlay: false,
@@ -303,7 +303,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     title: 'Tasmania ES Topographic',
                     isDefault: true,
                     layer: L.tileLayer(
-                        'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Orthophoto/MapServer/{z}/{y}/{x}?blankTile=false',
+                        'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Orthophoto/MapServer/tile/{z}/{y}/{x}?blankTile=false',
                         {
                             code: 'tasE',
                             isOverlay: false,
