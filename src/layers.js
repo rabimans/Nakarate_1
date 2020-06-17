@@ -5,7 +5,6 @@ import {BingLayer} from '~/lib/leaflet.layer.bing';
 import config from './config';
 import '~/lib/leaflet.layer.soviet-topomaps-grid';
 import '~/lib/leaflet.layer.westraPasses';
-import '~/lib/leaflet.layer.wikimapia';
 import urlViaCorsProxy from '~/lib/CORSProxy';
 
     const layersDefs = [
@@ -384,16 +383,6 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     )
                 },
                 {
-                    title: 'Wikimapia',
-                    isDefault: true,
-                    layer: new L.Wikimapia({
-                        code: 'W',
-                        isOverlay: true,
-                        print: false,
-                        jnx: false
-                    })
-                },
-                {
                     title: 'OpenTopoMap',
                     isDefault: false,
                     layer: L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
@@ -667,8 +656,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'Strava heatmap (all)',
         'Strava heatmap (run)',
         'Strava heatmap (ride)',
-        'Strava heatmap (winter)',
-        'Wikimapia'
+        'Strava heatmap (winter)'
     ];
 
 function getLayers() {
