@@ -450,7 +450,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 {
                     title: 'OSM Outdoors',
                     isDefault: false,
-                    layer: L.tileLayer('https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=cf406f30bfc54296a9d573ced1e9d6cf',
+                    layer: L.tileLayer('https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png',
                         {
                             code: 'Oso',
                             isOverlay: false,
