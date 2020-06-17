@@ -83,8 +83,7 @@ L.Control.Panoramas = L.Control.extend({
                     code: 'w',
                     selected: ko.observable(false),
                     mapMarkerType: 'slim'
-                },
-                
+                }
             ];
         },
 
