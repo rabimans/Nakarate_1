@@ -127,6 +127,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                         {
                             code: 'qR',
                             isOverlay: true,
+                            isOverlayTransparent: true,
                             scaleDependent: true,
                             maxNativeZoom: 18,
                             print: true,
@@ -720,7 +721,6 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'Geoscience Australia 1:100,000',
         'Geoscience 1:100,000 unpublished',
         'Geoscience Australia 1:250,000',
-        'Geoscience Australia National Map',
         'Geoscience Australia National Map',
         'Historic 1:250,000 (R501)',
         'Historic 1:250,000 (R502)',
