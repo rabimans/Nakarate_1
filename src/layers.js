@@ -59,22 +59,6 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     )
                 },
                 {
-                    title: 'ESRI Satellite',
-                    isDefault: true,
-                    layer: L.tileLayer(
-                        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-                        {
-                            code: 'E',
-                            isOverlay: false,
-                            scaleDependent: false,
-                            maxNativeZoom: 18,
-                            print: true,
-                            jnx: true,
-                            shortName: 'esri'
-                        }
-                    )
-                },
-                {
                     title: 'Yandex map',
                     isDefault: true,
                     layer: new L.Layer.Yandex('map',
