@@ -5,7 +5,7 @@ export default {
         <a href="https://help.track.guide">Help</a> |
         <a href="https://about.track.guide">About</a> |
         <a href="mailto:info@track.guide" target="_self">info@track.guide</a>`,
-    defaultLocation: [-33.865143, 151.209900],
+    defaultLocation: [-27.43882, 153.15731],
     defaultZoom: 10,
     googleApiUrl: `https://maps.googleapis.com/maps/api/js?v=3&key=${secrets.google}`,
     westraDataBaseUrl: 'https://nakarte.me/westraPasses/',
