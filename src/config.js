@@ -1,7 +1,10 @@
 import secrets from './secrets';
 
 export default {
-    caption: `<a href="mailto:info@au.track.guide" target="_self">info@au.track.guide</a>`,
+    caption: `
+        <a href="https://help.track.guide">Documentation</a> |
+        <a href="https://about.track.guide">News</a> |
+        <a href="mailto:info@track.guide" target="_self">info@au.track.guidee</a>`,
     defaultLocation: [-33.865143, 151.209900],
     defaultZoom: 10,
     googleApiUrl: `https://maps.googleapis.com/maps/api/js?v=3&key=${secrets.google}`,
