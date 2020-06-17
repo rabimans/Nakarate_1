@@ -56,6 +56,86 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     )
                 },
                 {
+                    title: 'Historic 1:250,000 (R501)',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://s3-ap-southeast-2.amazonaws.com/au.topodude.com.au/R501/{z}/{x}/{y}.png',
+                        {
+                            code: 'ga1',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            maxNativeZoom: 13,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Historic501'
+                        }
+                    )
+                },
+                {
+                    title: 'Historic 1:250,000 (R502)',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://s3-ap-southeast-2.amazonaws.com/au.topodude.com.au/R502_Australia_250k/{z}/{x}/{y}.png',
+                        {
+                            code: 'ga2',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            maxNativeZoom: 13,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Historic502'
+                        }
+                    )
+                },
+                {
+                    title: 'Geoscience Australia 1:100,000',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://s3-ap-southeast-2.amazonaws.com/au.topodude.com.au/Geoscience%20100k/{z}/{x}/{y}.png',
+                        {
+                            code: 'ga3',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            maxNativeZoom: 13,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Geoscience100k'
+                        }
+                    )
+                },
+                {
+                    title: 'Geoscience 1:100,000 unpublished',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'http://s3-ap-southeast-2.amazonaws.com/au.topodude.com.au/Geoscience_100k_unpublished/{z}/{x}/{y}.png',
+                        {
+                            code: 'ga4',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Geoscience100kun'
+                        }
+                    )
+                },
+                {
+                    title: 'Queensland Roads',
+                    isDefault: true,
+                    layer: L.tileLayer(
+                        'https://gisservices.information.qld.gov.au/arcgis/rest/services/Transportation/RoadsCache/MapServer/tile/{z}/{y}/{x}',
+                        {
+                            code: 'qR',
+                            isOverlay: true,
+                            scaleDependent: true,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'Queensland_Roads'
+                        }
+                    )
+                },
+                {
                     title: 'NSW Topo',
                     isDefault: true,
                     layer: L.tileLayer(
@@ -545,8 +625,13 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
             title: 'Australia',
             layers: [
                 'Geoscience Australia Base',
+                'Geoscience Australia 1:100,000',
                 'Geoscience Australia 1:250,000',
-                'Geoscience Australia National Map'
+                'Geoscience Australia National Map',
+                'Historic 1:250,000 (R501)',
+                'Historic 1:250,000 (R502)',
+                'Geoscience 1:100,000 unpublished'
+
             ],
         },
         {
@@ -562,7 +647,8 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
             title: 'Australia - Queensland',
             layers: [
                 'QTopo',
-                'QImagery'
+                'QImagery',
+                'Queensland Roads'
             ],
         },
         {
@@ -631,8 +717,13 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'Bing Imagery',
         // Australia maps
         'Geoscience Australia Base',
+        'Geoscience Australia 1:100,000',
+        'Geoscience 1:100,000 unpublished',
         'Geoscience Australia 1:250,000',
         'Geoscience Australia National Map',
+        'Geoscience Australia National Map',
+        'Historic 1:250,000 (R501)',
+        'Historic 1:250,000 (R502)',
         'Tasmania Topographic base map',
         'Tasmania Raster',
         'Tasmania Imagery',
@@ -648,6 +739,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'Google Terrain',
         // map overlays
         '#custom-bottom',
+        'Queensland Roads',
         '#custom-top',
 
         // line overlays
