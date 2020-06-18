@@ -697,7 +697,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
             title: 'Default layers',
             layers: [
                 'OpenStreetMap',
-                'OpenTopoMap',  
+                'OpenTopoMap',
             ],
         },
         {
@@ -724,7 +724,6 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 'Historic 1:250,000 (R501)',
                 'Historic 1:250,000 (R502)',
                 'Geoscience 1:100,000 unpublished'
-
             ],
         },
         {
