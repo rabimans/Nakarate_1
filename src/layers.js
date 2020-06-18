@@ -386,7 +386,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                             code: 'tasE',
                             isOverlay: false,
                             scaleDependent: false,
-                            maxNativeZoom: 18,
+                            maxNativeZoom: 14,
                             print: true,
                             jnx: true,
                             shortName: 'Tasmania_Emergency_Services'
