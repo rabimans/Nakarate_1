@@ -12,7 +12,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     title: 'here',
                     description: 'here base map',
                     isDefault: true,
-                    layer: L.tileLayer('https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
+                    layer: L.tileLayer('https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
                         {
                             code: 'here',
                             isOverlay: false,
