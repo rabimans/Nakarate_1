@@ -322,7 +322,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                             code: 'gaNM',
                             isOverlay: false,
                             scaleDependent: false,
-                            maxNativeZoom: 18,
+                            maxNativeZoom: 16,
                             print: true,
                             jnx: true,
                             shortName: 'Geoscience_Australia_NM'
