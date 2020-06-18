@@ -25,6 +25,22 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     )
                 },
                 {
+                    title: 'TomTom',
+                    description: 'TomTom base map',
+                    isDefault: true,
+                    layer: L.tileLayer('https://api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?key=A3oh7uISGmCWRU3VuA7USH3ltMk0PXBF',
+                        {
+                            code: 'tom',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'tomtom'
+                        }
+                    )
+                },
+                {
                     title: 'OpenStreetMap',
                     description: 'OSM default style',
                     isDefault: true,
@@ -636,7 +652,8 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 'Google Imagery',
                 'Google Terrain',
                 'Bing Imagery',
-                'here'
+                'here',
+                'TomTom'
             ],
         },
         {
@@ -755,6 +772,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'Google Map',
         'Google Terrain',
         'here',
+        'TomTom',
         // map overlays
         '#custom-bottom',
         'Queensland Roads',
