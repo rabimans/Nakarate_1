@@ -14,14 +14,14 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     isDefault: true,
                     layer: L.tileLayer('https://{s}.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
                         {
-                            code: 'here',
+                            code: 'hB',
                             isOverlay: false,
                             scaleDependent: true,
                             subdomains: '1234',
                             maxNativeZoom: 18,
                             print: true,
                             jnx: true,
-                            shortName: 'here'
+                            shortName: 'hereBase'
                         }
                     )
                 },
@@ -31,14 +31,14 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     isDefault: true,
                     layer: L.tileLayer('https://{s}.aerial.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
                         {
-                            code: 'here',
+                            code: 'hI',
                             isOverlay: false,
                             scaleDependent: true,
                             subdomains: '1234',
                             maxNativeZoom: 18,
                             print: true,
                             jnx: true,
-                            shortName: 'here'
+                            shortName: 'hereImagery'
                         }
                     )
                 },
