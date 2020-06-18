@@ -768,7 +768,6 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         {
             title: 'OpenStreetMap alternatives',
             layers: [
-                'OpenTopoMap',
                 'OpenCycleMap',
                 'OSM Outdoors',
                 'OpenLandscapeMap'
