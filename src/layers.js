@@ -12,11 +12,29 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     title: 'here',
                     description: 'here base map',
                     isDefault: true,
-                    layer: L.tileLayer('https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
+                    layer: L.tileLayer('https://{s}.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
                         {
                             code: 'here',
                             isOverlay: false,
                             scaleDependent: true,
+                            subdomains: '1234',
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'here'
+                        }
+                    )
+                },
+                {
+                    title: 'here Imagery',
+                    description: 'here Imagery',
+                    isDefault: true,
+                    layer: L.tileLayer('https://{s}.aerial.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
+                        {
+                            code: 'here',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            subdomains: '1234',
                             maxNativeZoom: 18,
                             print: true,
                             jnx: true,
@@ -28,11 +46,12 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     title: 'TomTom',
                     description: 'TomTom base map',
                     isDefault: true,
-                    layer: L.tileLayer('https://api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?key=A3oh7uISGmCWRU3VuA7USH3ltMk0PXBF',
+                    layer: L.tileLayer('https://{s}.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?key=A3oh7uISGmCWRU3VuA7USH3ltMk0PXBF',
                         {
-                            code: 'tom',
+                            code: 'tt',
                             isOverlay: false,
                             scaleDependent: true,
+                            subdomains: 'abcd',
                             maxNativeZoom: 18,
                             print: true,
                             jnx: true,
@@ -556,6 +575,23 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     )
                 },
                 {
+                    title: 'TomTom Hybrid',
+                    isDefault: false,
+                    layer: L.tileLayer('https://{s}.api.tomtom.com/map/1/tile/hybrid/main/{z}/{x}/{y}.png?key=A3oh7uISGmCWRU3VuA7USH3ltMk0PXBF',
+                        {
+                            code: 'ttH',
+                            isOverlay: true,
+                            isOverlayTransparent: true,
+                            scaleDependent: true,
+                            ubdomains: 'abcd',
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: false,
+                            shortName: 'TomTomHybrid'
+                        }
+                    )
+                },
+                {
                     title: 'Strava heatmap (all)',
                     isDefault: false,
                     layer: L.tileLayer(
@@ -653,6 +689,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 'Google Terrain',
                 'Bing Imagery',
                 'here',
+                'here Imagery',
                 'TomTom'
             ],
         },
@@ -720,6 +757,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
             title: 'Miscellaneous',
             layers: [
                 'Google Hybrid',
+                'TomTom Hybrid'
             ]
         },
         {
@@ -750,6 +788,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'SA Imagery',
         'Google Imagery',
         'Bing Imagery',
+        'here Imagery',
         // Australia maps
         'Geoscience Australia Base',
         'Geoscience Australia 1:100,000',
@@ -776,6 +815,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         // map overlays
         '#custom-bottom',
         'Queensland Roads',
+        'TomTom Hybrid',
         '#custom-top',
 
         // line overlays
