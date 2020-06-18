@@ -29,7 +29,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     title: 'here Imagery',
                     description: 'here Imagery',
                     isDefault: true,
-                    layer: L.tileLayer('https://{s}.aerial.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
+                    layer: L.tileLayer('https://{s}.aerial.maps.ls.hereapi.com/maptile/2.1/maptile/newest/satellite.day/{z}/{x}/{y}/256/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
                         {
                             code: 'hI',
                             isOverlay: false,
@@ -534,7 +534,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                     title: 'OpenCycleMap',
                     description: '<a href="https://www.opencyclemap.org/docs/">(Info and key)</a>',
                     isDefault: false,
-                    layer: L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png',
+                    layer: L.tileLayer('https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=cf406f30bfc54296a9d573ced1e9d6cf',
                         {
                             code: 'Ocm',
                             isOverlay: false,
@@ -542,6 +542,21 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                             print: true,
                             jnx: true,
                             shortName: 'opencyclemap',
+                        }
+                    )
+                },
+                {
+                    title: 'OpenLandscapeMap',
+                    description: '<a href="https://www.thunderforest.com/maps/landscape/">(Info and key)</a>',
+                    isDefault: false,
+                    layer: L.tileLayer('https://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=cf406f30bfc54296a9d573ced1e9d6cf',
+                        {
+                            code: 'Ols',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            print: true,
+                            jnx: true,
+                            shortName: 'OpenLSM',
                         }
                     )
                 },
@@ -750,7 +765,8 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
             layers: [
                 'OpenTopoMap',
                 'OpenCycleMap',
-                'OSM Outdoors'
+                'OSM Outdoors',
+                'OpenLandscapeMap'
             ],
         },
         {
@@ -780,7 +796,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'OpenTopoMap',
         'OpenCycleMap',
         'OSM Outdoors',
-        'ESRI Topo',
+        'OpenLandscapeMap',
         // Imagery
         'ESRI Imagery',
         'NSW Imagery',
@@ -812,6 +828,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         'Google Terrain',
         'here',
         'TomTom',
+        'ESRI Topo',
         // map overlays
         '#custom-bottom',
         'Queensland Roads',
