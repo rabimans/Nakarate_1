@@ -9,6 +9,22 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
 
     const layersDefs = [
                 {
+                    title: 'here',
+                    description: 'here base map',
+                    isDefault: true,
+                    layer: L.tileLayer('https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/13/4400/2686/256/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
+                        {
+                            code: 'here',
+                            isOverlay: false,
+                            scaleDependent: true,
+                            maxNativeZoom: 18,
+                            print: true,
+                            jnx: true,
+                            shortName: 'here'
+                        }
+                    )
+                },
+                {
                     title: 'OpenStreetMap',
                     description: 'OSM default style',
                     isDefault: true,
@@ -161,7 +177,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                             code: 'nswR',
                             isOverlay: false,
                             scaleDependent: false,
-                            maxNativeZoom: 18,
+                            maxNativeZoom: 16,
                             print: true,
                             jnx: true,
                             shortName: 'NSW_Raster'
@@ -193,7 +209,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                             code: 'nswH',
                             isOverlay: false,
                             scaleDependent: false,
-                            maxNativeZoom: 18,
+                            maxNativeZoom: 16,
                             print: true,
                             jnx: true,
                             shortName: 'NSW_Historic'
@@ -354,7 +370,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                             code: 'tasR',
                             isOverlay: false,
                             scaleDependent: false,
-                            maxNativeZoom: 18,
+                            maxNativeZoom: 15,
                             print: true,
                             jnx: true,
                             shortName: 'Tasmania_Raster'
@@ -619,7 +635,8 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 'Google Map',
                 'Google Imagery',
                 'Google Terrain',
-                'Bing Imagery'
+                'Bing Imagery',
+                'here'
             ],
         },
         {
@@ -737,6 +754,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         // Commercial maps
         'Google Map',
         'Google Terrain',
+        'here',
         // map overlays
         '#custom-bottom',
         'Queensland Roads',
