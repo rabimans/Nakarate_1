@@ -10,8 +10,8 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
     const layersDefs = [
                 {
                     title: 'here',
-                    description: 'here base map',
-                    isDefault: true,
+                    description: '- here Base Map',
+                    isDefault: false,
                     layer: L.tileLayer('https://{s}.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
                         {
                             code: 'hB',
@@ -27,8 +27,8 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'here Imagery',
-                    description: 'here Imagery',
-                    isDefault: true,
+                    description: '- here Imagery',
+                    isDefault: false,
                     layer: L.tileLayer('https://{s}.aerial.maps.ls.hereapi.com/maptile/2.1/maptile/newest/satellite.day/{z}/{x}/{y}/256/png8?apikey=iu5MkFb0qMyORRDvbKXi4_b36zI0CYwSR9NvFv8wT2g',
                         {
                             code: 'hI',
@@ -45,7 +45,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 {
                     title: 'TomTom',
                     description: 'TomTom base map',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer('https://{s}.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?key=A3oh7uISGmCWRU3VuA7USH3ltMk0PXBF',
                         {
                             code: 'tt',
@@ -76,7 +76,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'ESRI Imagery',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -92,7 +92,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'ESRI Topo',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -108,7 +108,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Historic 1:250,000 (R501)',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://s3-ap-southeast-2.amazonaws.com/au.topodude.com.au/R501/{z}/{x}/{y}.png',
                         {
@@ -124,7 +124,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Historic 1:250,000 (R502)',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://s3-ap-southeast-2.amazonaws.com/au.topodude.com.au/R502_Australia_250k/{z}/{x}/{y}.png',
                         {
@@ -140,7 +140,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Geoscience Australia 1:100,000',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://s3-ap-southeast-2.amazonaws.com/au.topodude.com.au/Geoscience%20100k/{z}/{x}/{y}.png',
                         {
@@ -156,7 +156,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Geoscience 1:100,000 unpublished',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://s3-ap-southeast-2.amazonaws.com/au.topodude.com.au/Geoscience_100k_unpublished/{z}/{x}/{y}.png',
                         {
@@ -172,7 +172,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Queensland Roads',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'https://gisservices.information.qld.gov.au/arcgis/rest/services/Transportation/RoadsCache/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -189,7 +189,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'NSW Topo',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://maps.six.nsw.gov.au/arcgis/rest/services/sixmaps/LPIMap/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -205,7 +205,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'NSW Raster',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://maps.six.nsw.gov.au/arcgis/rest/services/sixmaps/LPITopoMap/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -221,7 +221,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'NSW Imagery',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://maps.six.nsw.gov.au/arcgis/rest/services/sixmaps/LPI_Imagery_Best/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -237,7 +237,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'NSW Historic',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://maps.six.nsw.gov.au/arcgis/rest/services/sixmaps/LPITopoMap_S1/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -253,7 +253,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'QTopo',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'https://gisservices.information.qld.gov.au/arcgis/rest/services/Basemaps/QldMap_Topo/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -269,7 +269,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'QImagery',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'https://gisservices.information.qld.gov.au/arcgis/rest/services/Imagery/QldBase_AllUsers/ImageServer/tile/{z}/{y}/{x}',
                         {
@@ -285,7 +285,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'SA Topo',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://www.location.sa.gov.au/arcgis/rest/services/BaseMaps/Topographic_wmas/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -301,7 +301,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'SA Imagery',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'https://imagemap.geohub.sa.gov.au/mapproxy/wmts/PublicMosaic/webmercator_22/{z}/{x}/{y}.png',
                         {
@@ -318,7 +318,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'VIC Emergency Atlas',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'https://maps.em.vic.gov.au/tms_cache/mapscape_vic_merc_color_ed8/{z}/{x}/{y}.png',
                         {
@@ -334,7 +334,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Geoscience Australia Base',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://services.ga.gov.au/site_7/rest/services/Topographic_Base_Map_WM/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -350,7 +350,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Geoscience Australia 1:250,000',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'http://services.ga.gov.au/site_7/rest/services/NATMAP_Digital_Maps_250K_2008Edition_WM/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -382,7 +382,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Tasmania Topographic base map',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Topographic/MapServer/tile/{z}/{y}/{x}?blankTile=false',
                         {
@@ -398,7 +398,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Tasmania Raster',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/TasmapRaster/MapServer/tile/{z}/{y}/{x}',
                         {
@@ -414,7 +414,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Tasmania Imagery',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/Orthophoto/MapServer/tile/{z}/{y}/{x}?blankTile=false',
                         {
@@ -430,7 +430,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Tasmania ES Topographic',
-                    isDefault: true,
+                    isDefault: false,
                     layer: L.tileLayer(
                         'https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/ESgisMapBookPUBLIC/MapServer/tile/{z}/{y}/{x}?blankTile=false',
                         {
@@ -446,7 +446,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Google Map',
-                    isDefault: true,
+                    isDefault: false,
                     layer: new L.Layer.GoogleMap(
                         {
                             code: 'G',
@@ -475,7 +475,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Google Imagery',
-                    isDefault: true,
+                    isDefault: false,
                     layer: new L.Layer.GoogleSat(
                         {
                             code: 'L',
@@ -489,7 +489,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Google Terrain',
-                    isDefault: true,
+                    isDefault: false,
                     layer: new L.Layer.GoogleTerrain({
                             code: 'P',
                             isOverlay: false,
@@ -502,7 +502,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'Bing Imagery',
-                    isDefault: true,
+                    isDefault: false,
                     layer: new BingLayer(config.bingKey,
                         {
                             code: 'I',
@@ -516,7 +516,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
                 },
                 {
                     title: 'OpenTopoMap',
-                    isDefault: false,
+                    isDefault: true,
                     layer: L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
                         {
                             code: 'Otm',
@@ -697,6 +697,12 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
             title: 'Default layers',
             layers: [
                 'OpenStreetMap',
+                'OpenTopoMap',  
+            ],
+        },
+        {
+            title: 'Global',
+            layers: [
                 'ESRI Imagery',
                 'ESRI Topo',
                 'Google Map',
