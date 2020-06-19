@@ -8,6 +8,23 @@ import '~/lib/leaflet.layer.westraPasses';
 import urlViaCorsProxy from '~/lib/CORSProxy';
 
     const layersDefs = [
+
+                {
+                    title: 'Bing Road',
+                    isDefault: false,
+                    layer: new BingLayer(config.bingKey,
+                        {
+                            type: 'Road',
+                            maxNativeZoom: 18,
+                            code: 'bR',
+                            isOverlay: false,
+                            scaleDependent: false,
+                            print: true,
+                            jnx: true,
+                            shortName: 'bing_road'
+                        }
+                    )
+                },
                 {
                     title: 'here',
                     description: '- here Base Map',
@@ -703,11 +720,12 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         {
             title: 'Global',
             layers: [
-                'ESRI Imagery',
                 'ESRI Topo',
+                'ESRI Imagery',
                 'Google Map',
                 'Google Imagery',
                 'Google Terrain',
+                'Bing Road',
                 'Bing Imagery',
                 'here',
                 'here Imagery',
@@ -830,6 +848,7 @@ import urlViaCorsProxy from '~/lib/CORSProxy';
         // Commercial maps
         'Google Map',
         'Google Terrain',
+        'Bing Road',
         'here',
         'TomTom',
         'ESRI Topo',
